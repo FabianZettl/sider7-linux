@@ -113,3 +113,12 @@ All credit for Sider itself goes to the [pes-modding](https://github.com/pes-mod
 project. This launcher is independent, original code, released under the
 [MIT license](LICENSE) — see the license file for the (short) disclaimer
 about what this project does and doesn't include.
+
+## AI disclosure
+
+This tool was built with [Claude Code](https://claude.com/claude-code)
+(Anthropic's AI coding agent), including the reverse-engineering of Sider's
+injection mechanism, the `ptrace`-based implementation, and this
+documentation. It was developed interactively with a human reviewing and
+directing the work, and tested against real installations of Football Life
+2026 and the Steam release of eFootball PES 2021.
