@@ -26,9 +26,13 @@ REAL_PY=$(readlink -f .venv/bin/python)
 cp "$REAL_PY" .venv/bin/sider-inject-python
 
 echo
-echo "[+] done. One more manual step (needs your password, so run it yourself):"
+echo "=============================================================================="
+echo "[+] done. Run EXACTLY this command now (copy the line below, not one from"
+echo "    the README -- the path is specific to where YOU cloned this repo):"
 echo
-echo "    sudo setcap cap_sys_ptrace+eip \"$DIR/.venv/bin/sider-inject-python\""
+echo "sudo setcap cap_sys_ptrace+eip \"$DIR/.venv/bin/sider-inject-python\""
+echo
+echo "=============================================================================="
 echo
 echo "After that, use $DIR/.venv/bin/sider-inject-python to run sider_inject.py"
 echo "(see README.md and the run-*.sh templates for how to wire it into your launcher)."

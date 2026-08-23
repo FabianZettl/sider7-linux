@@ -41,12 +41,15 @@ cd sider7-linux
 ./setup.sh
 ```
 
-`setup.sh` creates an isolated Python environment and prints one more
-command for you to run yourself (it needs your password, so the script
-won't run it for you):
+`setup.sh` creates an isolated Python environment and, at the very end of
+its output, prints one more command for you to run yourself (it needs your
+password, so the script won't run it for you). It looks like this, but
+**copy the actual command `setup.sh` printed for you, not this example** —
+the path depends on where you cloned the repo:
 
 ```sh
-sudo setcap cap_sys_ptrace+eip "/path/it/prints/.venv/bin/sider-inject-python"
+# Example only -- use the real path from YOUR setup.sh output, not this one:
+sudo setcap cap_sys_ptrace+eip "/home/YOU/sider7-linux/.venv/bin/sider-inject-python"
 ```
 
 This grants the one specific permission the injector needs (to attach to
