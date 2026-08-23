@@ -41,16 +41,13 @@ cd sider7-linux
 ./setup.sh
 ```
 
-`setup.sh` creates an isolated Python environment and, at the very end of
-its output, prints one more command for you to run yourself (it needs your
-password, so the script won't run it for you). It looks like this, but
-**copy the actual command `setup.sh` printed for you, not this example** —
-the path depends on where you cloned the repo:
-
-```sh
-# Example only -- use the real path from YOUR setup.sh output, not this one:
-sudo setcap cap_sys_ptrace+eip "/home/YOU/sider7-linux/.venv/bin/sider-inject-python"
-```
+`setup.sh` needs one more manual step from you after it finishes: a
+`sudo setcap ...` command that grants the injector permission to attach to
+your game process. **`setup.sh` prints that exact command, with the correct
+path, at the very end of its own output — scroll up in your terminal and
+copy *that* line.** There's no generic version of it here to copy by
+mistake: the path always depends on exactly where you cloned this repo, so
+any example shown outside your own terminal would be wrong for you.
 
 This grants the one specific permission the injector needs (to attach to
 your game process) to its own private copy of the Python interpreter —
